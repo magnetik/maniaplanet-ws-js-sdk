@@ -1,3 +1,4 @@
+# from https://github.com/jashkenas/coffee-script/wiki/[HowTo]-Compiling-and-Setting-Up-Build-Tools
 fs     = require 'fs'
 {exec} = require 'child_process'
 
@@ -14,11 +15,11 @@ task 'build', 'Build single application file from source files', ->
       appContents[index] = fileContents
       process() if --remaining is 0
   process = ->
-    fs.writeFile 'app.coffee', appContents.join('\n\n'), 'utf8', (err) ->
+    fs.writeFile 'bin/app.coffee', appContents.join('\n\n'), 'utf8', (err) ->
       throw err if err
-      exec 'coffee --compile app.coffee', (err, stdout, stderr) ->
+      exec 'coffee --compile bin/app.coffee', (err, stdout, stderr) ->
         throw err if err
         console.log stdout + stderr
-        fs.unlink 'app.coffee', (err) ->
+        fs.unlink 'bin/app.coffee', (err) ->
           throw err if err
           console.log 'Done.'
