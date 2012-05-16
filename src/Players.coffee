@@ -1,5 +1,6 @@
-HTTPClient      = require './HTTPClient'
+root = exports ? this
 
-class Players extends HTTPClient
+root.Players = class Players extends HTTPClient
   get: (login) ->
     execute('get','player/')
+

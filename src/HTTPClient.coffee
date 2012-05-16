@@ -1,10 +1,10 @@
-https     = require 'https'
-url       = require 'url'
+
 
 class HTTPClient
   @apiURL: 'https://ws.maniaplanet.com'
   
   constructor: (@username, @password) ->
+    
   
   execute: (method, ressource) ->
     ressourceURL = url.parse(@apiURL + ressource)

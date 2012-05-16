@@ -5,7 +5,8 @@ fs     = require 'fs'
 appFiles  = [
   # omit src/ and .coffee to make the below lines a little shorter
   'ManiaConnect/Client',
-  'HTTPClient'
+  'HTTPClient',
+  'Players'
 ]
 
 task 'build', 'Build single application file from source files', ->
