@@ -22,6 +22,7 @@ class HTTPClient
       res.on 'data', (chunk) ->
         data += chunk.toString()
       res.on 'end', () ->
+        data
         
         
       
