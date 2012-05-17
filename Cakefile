@@ -6,7 +6,8 @@ appFiles  = [
   # omit src/ and .coffee to make the below lines a little shorter
   'ManiaConnect/Client',
   'HTTPClient',
-  'Players'
+  'Players',
+  'ManiaPlanet'
 ]
 
 task 'build', 'Build single application file from source files', ->
@@ -17,11 +18,11 @@ task 'build', 'Build single application file from source files', ->
       appContents[index] = fileContents
       process() if --remaining is 0
   process = ->
-    fs.writeFile 'bin/app.coffee', appContents.join('\n\n'), 'utf8', (err) ->
+    fs.writeFile 'bin/ManiaPlanet.coffee', appContents.join('\n\n'), 'utf8', (err) ->
       throw err if err
-      exec 'coffee --compile bin/app.coffee', (err, stdout, stderr) ->
+      exec 'coffee --compile bin/ManiaPlanet.coffee', (err, stdout, stderr) ->
         throw err if err
         console.log stdout + stderr
-        fs.unlink 'bin/app.coffee', (err) ->
+        fs.unlink 'bin/ManiaPlanet.coffee', (err) ->
           throw err if err
           console.log 'Done.'
