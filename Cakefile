@@ -9,6 +9,7 @@ appFiles  = [
   'Players',
   'Dedicated',
   'Manialinks',
+  'Zones',
   'ManiaPlanet'
 ]
 
