@@ -6,11 +6,10 @@ appFiles  = [
   # omit src/ and .coffee to make the below lines a little shorter
   'ManiaConnect/Client',
   'HTTPClient',
-  'Canyon/MultiplayerRankings',
-  'Canyon/SoloRankings',
   'Dedicated',
   'Manialinks',
   'Players',
+  'Rankings',
   'Zones',
   'ManiaPlanet'
 ]
