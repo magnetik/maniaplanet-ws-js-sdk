@@ -8,6 +8,7 @@ appFiles  = [
   'HTTPClient',
   'Dedicated',
   'Manialinks',
+  'Foobar',
   'Players',
   'Rankings',
   'Zones',
