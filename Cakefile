@@ -8,6 +8,7 @@ appFiles  = [
   'HTTPClient',
   'Players',
   'Dedicated',
+  'Manialinks',
   'ManiaPlanet'
 ]
 
