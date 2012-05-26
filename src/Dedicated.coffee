@@ -1,4 +1,4 @@
 class Dedicated extends HTTPClient
-  get: (login) ->
-    execute('get',"dedicated/#{login}")
+  get: (login, callback) ->
+    execute('get',"dedicated/#{login}", callback)
 

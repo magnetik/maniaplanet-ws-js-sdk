@@ -1,4 +1,4 @@
 class Manialinks extends HTTPClient
-  get: (code) ->
-    execute('get',"manialinks/#{code}")
+  get: (code, callback) ->
+    execute('get',"manialinks/#{code}", callback)
 
