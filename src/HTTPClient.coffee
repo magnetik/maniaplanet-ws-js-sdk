@@ -6,7 +6,7 @@ class HTTPClient
     throw new SyntaxError('Please specify an username and a password') if not @username? or not @password?
     
   
-  execute: (method, ressource) ->
+  execute: (method, ressource, callback) ->
     url = @apiURL + ressource + '/'
     $.ajax url,
       type:         method
@@ -17,6 +17,6 @@ class HTTPClient
       xhrFields: 
         withCredentials: true
       error: (jqXHR, textStatus, errorThrown) ->
-        $('body').append "AJAX Error: #{textStatus}"
+        callback jqXHR textStatus errorThrown
       success: (data, textStatus, jqXHR) ->
-        $('body').append "Successful AJAX call: #{data}"
+        callback(data, textStatus, jqXHR)

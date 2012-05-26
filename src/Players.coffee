@@ -1,4 +1,4 @@
 class Players extends HTTPClient
-  get: (login) =>
-    @execute('get',"players/#{login}")
+  get: (login, callback) =>
+    @execute('get',"players/#{login}", callback)
 

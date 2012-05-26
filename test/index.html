@@ -18,7 +18,9 @@
 			$(document).ready(function() {
                             $('#submit').click(function() {
                                 var players = new Players(document.form.username.value, document.form.password.value);
-                                players.get('magnetik.org');
+                                players.get('magnetik.org', function (data) {
+                                    alert(data.login + ' nickname is ' + data.nickname);
+                                });
                             });
                         });
 		</script>
