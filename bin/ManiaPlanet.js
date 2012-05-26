@@ -132,7 +132,7 @@
       if (length == null) {
         length = 10;
       }
-      return this.execute('get', this.environment + "/rankings/" + this.kind + ("/zone/?offset=" + offset + "&length=" + length), callback);
+      return this.execute('get', this.environment + "/rankings/" + this.kind + ("/zone/?offset=" + offset + "&amp;length=" + length), callback);
     };
 
     Rankings.prototype.getZone = function(path, offset, length, callback) {
@@ -142,7 +142,7 @@
       if (length == null) {
         length = 10;
       }
-      return this.execute('get', this.environment + "/rankings/" + this.kind + ("/zone/" + path + "/?offset=" + offset + "&length=" + length), callback);
+      return this.execute('get', this.environment + "/rankings/" + this.kind + ("/zone/" + path + "/?offset=" + offset + "&amp;length=" + length), callback);
     };
 
     Rankings.prototype.getChallengeWorld = function(challengeuid, offset, length, callback) {
@@ -153,7 +153,7 @@
         length = 10;
       }
       if (this.kind = 'solo') {
-        return this.execute('get', this.environment + ("/rankings/solo/challenges/" + challengeuid + "/?offset=" + offset + "&length=" + length), callback);
+        return this.execute('get', this.environment + ("/rankings/solo/challenges/" + challengeuid + "/?offset=" + offset + "&amp;length=" + length), callback);
       }
     };
 
@@ -165,7 +165,7 @@
         length = 10;
       }
       if (this.kind = 'solo') {
-        return this.execute('get', this.environment + ("/rankings/solo/challenges/" + challengeuid + "/" + path + "/?offset=" + offset + "&length=" + length), callback);
+        return this.execute('get', this.environment + ("/rankings/solo/challenges/" + challengeuid + "/" + path + "/?offset=" + offset + "&amp;length=" + length), callback);
       }
     };
 
