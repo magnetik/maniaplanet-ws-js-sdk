@@ -7,6 +7,7 @@ appFiles  = [
   'ManiaConnect/Client',
   'HTTPClient',
   'Players',
+  'Dedicated',
   'ManiaPlanet'
 ]
 
