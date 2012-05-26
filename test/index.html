@@ -15,11 +15,20 @@
                 </form>
                 
 		<script type="text/javascript">
-			$(document).ready(function() {
+			/*$(document).ready(function() {
                             $('#submit').click(function() {
                                 var players = new Players(document.form.username.value, document.form.password.value);
                                 players.get('magnetik.org', function (data) {
                                     alert(data.login + ' nickname is ' + data.nickname);
+                                });
+                            });
+                        });*/
+			$(document).ready(function() {
+                            $('#submit').click(function() {
+                                var rankings = new Rankings(document.form.username.value, document.form.password.value);
+								rankings.initRankings('canyon', 'multiplayer');
+                                rankings.getWorld(0, 10, function (data) {
+                                    alert('Path: ' + data.path);
                                 });
                             });
                         });
