@@ -7,7 +7,7 @@ class HTTPClient
     
   
   execute: (method, ressource) ->
-    url = @apiURL + ressource
+    url = @apiURL + ressource + '/'
     $.ajax url,
       type:         method
       dataType:     'jsonp'

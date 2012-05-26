@@ -36,7 +36,7 @@
 
     HTTPClient.prototype.execute = function(method, ressource) {
       var url;
-      url = this.apiURL + ressource;
+      url = this.apiURL + ressource + '/';
       return $.ajax(url, {
         type: method,
         dataType: 'jsonp',
@@ -69,7 +69,7 @@
     }
 
     Players.prototype.get = function(login) {
-      return this.execute('get', "player/" + login);
+      return this.execute('get', "players/" + login);
     };
 
     return Players;
