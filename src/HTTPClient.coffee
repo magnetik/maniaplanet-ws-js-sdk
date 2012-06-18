@@ -1,3 +1,4 @@
+jQuery = require('jquery')
 $ = jQuery
 
 class HTTPClient

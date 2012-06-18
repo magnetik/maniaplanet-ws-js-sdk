@@ -1,3 +1,3 @@
 class Foobar extends HTTPClient
-  get:  =>
+  get: (callback) ->
     @execute('get',"foobar/", callback)

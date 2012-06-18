@@ -31,3 +31,11 @@ task 'build', 'Build single application file from source files', ->
         fs.unlink 'bin/ManiaPlanet.coffee', (err) ->
           throw err if err
           console.log 'Done.'
+          
+task 'spec', 'run jasmine-node spec suite', ->
+  invoke 'build'
+  require 'jasmine-node'
+  target = process.cwd() + '/spec'
+  jasmine.executeSpecsInFolder target, (runner, log) ->
+    process.exit(runner.results().failedCount)
+  , false, true, "_spec.coffee$"
