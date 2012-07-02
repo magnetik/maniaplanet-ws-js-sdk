@@ -5,3 +5,4 @@ root.Manialinks = Manialinks
 root.Dedicated = Dedicated
 root.Zones = Zones
 root.Rankings = Rankings
+root.OAuth = OAuth

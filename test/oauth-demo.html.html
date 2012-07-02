@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	</head>
+	<body>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
+		<script type="text/javascript" src="../bin/ManiaPlanet.js"></script>
+
+		<form name="form">
+			<input type="button" id="submit" value="Test OAuth"/>
+		</form>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('#submit').click(function() {
+					var auth = new Client('localhost')
+					auth.login('basic', 'http://127.0.0.1/');
+				});
+			});
+		</script>
+	</body>
+</html>
