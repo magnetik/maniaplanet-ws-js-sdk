@@ -25,4 +25,4 @@ Usage is quite the same as the PHP SDK.
 
 ##Tests
 
-The framework [Jasmine](http://pivotal.github.com/jasmine/) is used to do unit test coverage.
+The framework [Jasmine](https://jasmine.github.io/) is used to do unit test coverage.
